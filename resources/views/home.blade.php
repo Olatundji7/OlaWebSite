@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8" />
-    <title>Portfolio - Mousamilou ABOU</title>
+    <title>Mousamilou ABOU</title>
 
     <!-- AOS (optionnel) -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -215,49 +215,49 @@
         </section>
 
         <!-- Section Contact -->
-      <section id="contact" class="py-20 bg-gray-100">
-    <div class="max-w-xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <!-- Section Contact -->
+<section id="contact" class="py-20 bg-gray-100">
+  <div class="max-w-xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-        <!-- 📸 Image bien espacée et centrée -->
-        <div class="flex justify-center">
-            <img src="{{ asset('img/p1.png') }}"
-                 alt="Image contact"
-                 class="w-[250px] h-[250px] object-cover rounded-lg shadow-md" />
-        </div>
-
-        <!-- ✉️ Formulaire -->
-        <div class="space-y-6">
-            <h2 class="text-3xl font-bold text-blue-600">Contactez-moi</h2>
-
-            @if(session('success'))
-                <div class="bg-green-100 text-green-800 p-3 rounded">
-                    {{ session('success') }}
-                </div>
-            @endif
-
-            <form method="POST" action="{{ route('contact.send') }}" class="space-y-4">
-                @csrf
-
-                <div>
-                    <label class="block text-gray-700">Nom</label>
-                    <input type="text" name="name" class="w-full p-2 border rounded" required>
-                </div>
-
-                <div>
-                    <label class="block text-gray-700">Email</label>
-                    <input type="email" name="email" class="w-full p-2 border rounded" required>
-                </div>
-
-                <div>
-                    <label class="block text-gray-700">Message</label>
-                    <textarea name="message" rows="5" class="w-full p-2 border rounded" required></textarea>
-                </div>
-
-                <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Envoyer</button>
-            </form>
-        </div>
+    <!-- Image -->
+    <div class="flex justify-center">
+      <img src="{{ asset('img/p1.png') }}" alt="Image contact"
+           class="w-[250px] h-[250px] object-cover rounded-lg shadow-md" />
     </div>
+
+    <!-- Formulaire -->
+    <div class="space-y-6">
+      <h2 class="text-3xl font-bold text-blue-600">Contactez-moi</h2>
+
+      @if(session('success'))
+        <div class="bg-green-100 text-green-800 p-3 rounded">
+          {{ session('success') }}
+        </div>
+      @endif
+
+      <form method="POST" action="{{ route('contact.send') }}" class="space-y-4">
+        @csrf
+        <div>
+          <label class="block text-gray-700">Nom</label>
+          <input type="text" name="name" class="w-full p-2 border rounded" required>
+        </div>
+
+        <div>
+          <label class="block text-gray-700">Email</label>
+          <input type="email" name="email" class="w-full p-2 border rounded" required>
+        </div>
+
+        <div>
+          <label class="block text-gray-700">Message</label>
+          <textarea name="message" rows="5" class="w-full p-2 border rounded" required></textarea>
+        </div>
+
+        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Envoyer</button>
+      </form>
+    </div>
+  </div>
 </section>
+
 
     </main>
 

@@ -27,8 +27,8 @@ Route::get('/contact', function () {
 });
 
 
-Route::get('/contact', [ContactController::class, 'show'])->name('contact');
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
+
 
 
 Route::middleware([
