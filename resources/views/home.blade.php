@@ -269,7 +269,7 @@
       <!-- Texte -->
       <p class="text-sm text-center mb-4">
           &copy; Copyright {{ date('Y') }} Tous droits réservés <br>
-          Développer par Mousamilou ABOU
+          Développer par ABOU M. OLATUNDJI
       </p>
 
       <!-- Icônes sociales -->
